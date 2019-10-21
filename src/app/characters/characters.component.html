@@ -1,0 +1,23 @@
+
+<div class="display"> <button class="button" (click)="getCharacters()">Get Characters</button> </div>
+<p></p>
+<div id="wrap">
+    
+ <div class="left">   
+<ul class="characters">
+<li [class.selected]="character === selectedCharacter" *ngFor="let character of characters.data.results " 
+(click)="onSelect(character)">
+    <span class="badge"> {{ character.name }} </span>
+
+</li>
+</ul>
+</div>
+<div class="right">
+<app-character-detail [character]="selectedCharacter"></app-character-detail>
+
+</div>
+</div>
+
+<div >    
+     <app-graphs [character]="selectedCharacter"></app-graphs>  
+</div>

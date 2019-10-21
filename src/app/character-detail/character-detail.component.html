@@ -1,0 +1,29 @@
+<div *ngIf="character">
+
+    <h2> {{character.name}}</h2>
+
+<div>
+       <img src="{{character.thumbnail.path}}.jpg" height="100"> 
+</div>
+
+<div>
+        <h4> Stories </h4>
+
+     <ul style="list-style-type: none;"> 
+         <li  *ngFor="let story of character.stories.items">
+                 {{ story.name }} 
+         </li>
+     </ul>   
+</div>
+
+<div>
+        <h4> Comics </h4>
+
+     <ul style="list-style-type: none;"> 
+         <li  *ngFor="let comic of character.comics.items">
+                 {{ comic.name }} 
+         </li>
+     </ul>   
+</div>
+
+</div>
